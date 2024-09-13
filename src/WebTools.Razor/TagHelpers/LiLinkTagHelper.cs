@@ -45,7 +45,7 @@ public class LiLinkTagHelper : TagHelper
 			output.Attributes.SetAttribute("class", classNames);
 		}
 		
-		output.PreContent.AppendHtml($@"<a href=""~{Page}"">");
+		output.PreContent.AppendHtml($@"<a href=""{Page}"">");
 		output.PostContent.AppendHtml($@"</a>");
 
 		base.Process(context, output);
