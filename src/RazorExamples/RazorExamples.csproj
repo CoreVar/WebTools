@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\WebTools.Razor\WebTools.Razor.csproj" />
+    <ProjectReference Include="..\WebTools\WebTools.csproj" />
   </ItemGroup>
 
 </Project>

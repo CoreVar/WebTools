@@ -23,11 +23,13 @@ jobs:
       run: |
         dotnet restore
         dotnet build ./WebTools.Razor/WebTools.Razor.csproj --configuration Release --no-restore
+        dotnet build ./WebTools/WebTools.csproj --configuration Release --no-restore
       working-directory: ./src
 
     - name: Pack
       run: |
         dotnet pack ./WebTools.Razor/WebTools.Razor.csproj -c Release -o nupkgs /p:PackageVersion=0.7.0-prerelease-${{ github.run_number }}
+        dotnet pack ./WebTools/WebTools.csproj -c Release -o nupkgs /p:PackageVersion=0.7.0-prerelease-${{ github.run_number }}
       working-directory: ./src
 
     - name: Upload NuGet Package as Artifact

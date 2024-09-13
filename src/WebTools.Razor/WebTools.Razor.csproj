@@ -6,6 +6,7 @@
     <Nullable>enable</Nullable>
     <AssemblyName>CoreVar.$(MSBuildProjectName)</AssemblyName>
     <RootNamespace>CoreVar.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
+    <Authors>CoreVar</Authors>
   </PropertyGroup>
 
   <ItemGroup>

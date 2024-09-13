@@ -6,10 +6,12 @@
     <Nullable>enable</Nullable>
     <AssemblyName>CoreVar.$(MSBuildProjectName)</AssemblyName>
     <RootNamespace>CoreVar.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
+    <Title>Web Tools</Title>
+    <Authors>CoreVar</Authors>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Components" Version="8.0.8" />
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
 
 </Project>
