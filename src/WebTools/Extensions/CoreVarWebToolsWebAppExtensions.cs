@@ -42,6 +42,8 @@ public static class CoreVarWebToolsWebAppExtensions
 				context.Response.Redirect(string.Concat("https://", targetHostname, context.Request.Path, context.Request.QueryString.Value), true, true);
 		});
 
+		app.UseHttpsRedirection();
+
 		return app;
 	}
 
@@ -55,6 +57,8 @@ public static class CoreVarWebToolsWebAppExtensions
 			else
 				context.Response.Redirect(string.Concat("https://", targetHostname, context.Request.Path, context.Request.QueryString.Value), true, true);
 		});
+
+		app.UseHttpsRedirection();
 
 		return app;
 	}
