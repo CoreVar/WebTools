@@ -27,10 +27,14 @@ public class LiLinkTagHelper : TagHelper
 
 		output.TagName = "li";
 
-		var isLinkActive = false;
+		var pageRoute = Page ?? "/";
+		if (pageRoute.EndsWith('/'))
+			pageRoute = string.Concat(pageRoute, "Index");
+
+        var isLinkActive = false;
 		if (ViewContext.RouteData.Values.TryGetValue("page", out var pageObjectValue) && 
 			pageObjectValue is string pageValue && 
-			pageValue.Equals(Page, StringComparison.OrdinalIgnoreCase))
+			pageValue.Equals(pageRoute, StringComparison.OrdinalIgnoreCase))
 			isLinkActive = true;
 
 		if (isLinkActive)
